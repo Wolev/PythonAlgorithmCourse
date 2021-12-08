@@ -49,7 +49,7 @@ class LinkedList:
 
         while actual_node is not None:
             print("%d" % actual_node.data)
-            actual_node = actual_node.next
+            actual_node = actual_node.next_node
 
 if __name__ == "__main__":
 
