@@ -13,18 +13,18 @@ class LinkedList:
         self.head = None
         self.size = 0
 
-    # The function to get the middle node
-    # Get a fast pointer that moves 2x as fast as slow pointer
-    # When the fast pointer reaches the end of the list, the small pointer is the middle node
-
     # Linear running time complexity: O(n) = N
     def get_middle_node(self):
+        ''' Get the middle node using 2 pointers. When the fast pointer
+        reaches the end, the slow pointer will become the middle node'''
 
         fast_pointer = self.head
         slow_pointer = self.head
 
-        # Similarly we can write just fast_pointer.nextNode without the is not None because it's implied
-        #while fast_pointer.next_node is not None and fast_pointer.next_node.next_node is not None:
+        # Similarly we can write just fast_pointer.nextNode without the is not None because it's implied.
+
+        #while fast_pointer.next_node is not None and fast_pointer.next_node.next_node is not None: turns into
+
         while fast_pointer.next_node and fast_pointer.next_node.next_node:
             # this slow_pointer will point to the middle node when the loop stops
 
